@@ -1,43 +1,53 @@
-Microsoft-Stock-Data-Analysis:
+# Microsoft Stock Data Analysis
 
-This project performs an in-depth Exploratory Data Analysis (EDA) on historical daily stock data for Microsoft (MSFT). The goal is to uncover trends, evaluate performance, understand volatility, and extract actionable insights from the stock's price behavior over time.
+An exploratory data analysis (EDA) of historical daily stock data for **Microsoft (MSFT)**. The goal is to understand price trends, performance and volatility, and to pull out insights that can feed later modelling.
 
-Key Objectives:
-Analyze price trends using time series plots.
+## Objectives
 
-Examine interdependencies between features using correlation heatmaps.
+- Analyse price trends with time series plots
+- Examine relationships between features with correlation heatmaps
+- Smooth noise and spot momentum with **10-day and 50-day moving averages**
+- Compute and visualise **daily returns** to measure risk and volatility
+- Study the distribution of returns with histograms to check behaviour and outliers
 
-Smooth out noise and identify momentum with 10-day and 50-day moving averages.
+## Dataset
 
-Compute and visualize daily returns to measure risk and volatility.
+Source file: `MSFT_daily_data.csv`
 
-Study the distribution of returns using histograms to assess behavior and outliers.
+| Field | Description |
+|-------|-------------|
+| Date | Trading day |
+| Open, High, Low, Close | Daily price range |
+| Volume | Shares traded |
 
-🛠️ Tools & Libraries Used:
-Python
+## Insights
 
-Pandas
+- MSFT shows clear upward trends with periods of high volatility.
+- Price variables are strongly correlated, while volume behaves independently.
+- Moving averages help show trend shifts and possible support and resistance levels.
+- Daily returns are mostly stable with occasional extreme spikes.
+- The return distribution is centred around zero but shows fat tails, a sign of tail risk.
 
-Matplotlib
+This analysis is a foundation for trading strategies, risk models or forecasting work built on historical price behaviour.
 
-Seaborn
+## Files
 
-Jupyter Notebook
+| File | Description |
+|------|-------------|
+| `masft_data_analysis.ipynb` | Analysis notebook |
+| `MSFT_daily_data.csv` | Historical daily MSFT data |
 
-📁 Dataset:
-Source: MSFT_daily_data.csv
+## Run it
 
-Fields include: Date, Open, High, Low, Close, Volume
+```bash
+pip install pandas matplotlib seaborn jupyter
+jupyter notebook masft_data_analysis.ipynb
+```
 
-📈 Insights:
-MSFT stock exhibits clear upward trends and periods of high volatility.
+## Tech stack
 
-Price-related variables are strongly correlated, while volume behaves independently.
+Python, pandas, matplotlib, seaborn, Jupyter Notebook
 
-Moving averages help visualize trend shifts and potential support/resistance levels.
+## Disclaimer
 
-Daily returns are mostly stable with occasional extreme spikes.
-
-Return distribution is centered around zero but shows signs of fat tails (risk).
-
-This analysis serves as a foundational step toward developing trading strategies, risk assessment models, or forecasting tools based on historical stock behavior.
+This is an educational analysis of historical data. It is not financial advice.

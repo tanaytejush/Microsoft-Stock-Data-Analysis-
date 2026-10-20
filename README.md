@@ -51,3 +51,8 @@ Python, pandas, matplotlib, seaborn, Jupyter Notebook
 ## Disclaimer
 
 This is an educational analysis of historical data. It is not financial advice.
+
+
+---
+
+<sub>Made by [tanaytejush](https://github.com/tanaytejush)</sub>
